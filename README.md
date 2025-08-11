@@ -1,6 +1,4 @@
----
-
-````markdown
+```
 # Laravel + Next.js Exercise
 
 A learning project for combining **Laravel (backend API)** with **Next.js (frontend)**, based on tutorials from **AngelJay Academy** on YouTube.
@@ -146,4 +144,4 @@ This project is for learning purposes. Please adjust or apply an appropriate lic
 * Add any custom steps—like seeding sample data, testing commands, or building for production.
 * Let me know if you'd like help writing usage examples, API documentation, or explaining integration details.
 
-[1]: https://github.com/jayimillena/laravel-nextjs-exercise.git "GitHub - jayimillena/laravel-nextjs-exercise: This repository is designed for learning NextJS on its fundamentals, this is indented to be public for future references in academe. All credits belongs to the online tutor channel on YouTube \"AngelJay Academy\" for teaching me this course."
+https://github.com/jayimillena/laravel-nextjs-exercise.git "GitHub - jayimillena/laravel-nextjs-exercise: This repository is designed for learning NextJS on its fundamentals, this is indented to be public for future references in academe. All credits belongs to the online tutor channel on YouTube \"AngelJay Academy\" for teaching me this course."
