@@ -1,62 +1,149 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+---
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+````markdown
+# Laravel + Next.js Exercise
 
-## About Laravel
+A learning project for combining **Laravel (backend API)** with **Next.js (frontend)**, based on tutorials from **AngelJay Academy** on YouTube.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+##  Table of Contents
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- [Project Overview](#project-overview)  
+- [Prerequisites](#prerequisites)  
+- [Installation](#installation)  
+  - [Backend (Laravel)](#installation--backend-laravel)  
+  - [Frontend (Next.js)](#installation--frontend-nextjs)  
+- [Usage](#usage)  
+- [Project Structure](#project-structure)  
+- [Credits & References](#credits--references)  
+- [License](#license)
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Project Overview
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+This repository contains two distinct parts:
+- **Laravel**: Serves as the backend API to handle business logic, authentication, and data storage.
+- **Next.js**: Acts as the frontend, consuming API endpoints and rendering dynamic content using React.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+It’s a practical exercise following AngelJay Academy’s tutorials.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Prerequisites
 
-### Premium Partners
+Ensure your system has the following installed:
+- PHP (>= 8.0) & Composer  
+- MySQL or any other relational database supported by Laravel  
+- Node.js (>= 14.x) & npm or yarn  
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Backend (Laravel)
 
-## Code of Conduct
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/jayimillena/laravel-nextjs-exercise.git
+   cd laravel-nextjs-exercise
+````
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+2. Navigate to the Laravel folder (if there’s a subfolder, like `backend`, adjust accordingly):
 
-## Security Vulnerabilities
+   ```bash
+   cd backend
+   ```
+3. Install dependencies:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```bash
+   composer install
+   ```
+4. Copy and configure `.env`:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Update DB credentials and other app-specific settings as needed.
+5. Generate app key and run migrations:
+
+   ```bash
+   php artisan key:generate
+   php artisan migrate
+   ```
+6. Launch the server:
+
+   ```bash
+   php artisan serve
+   ```
+
+### Frontend (Next.js)
+
+1. Navigate to the frontend directory:
+
+   ```bash
+   cd ../frontend
+   ```
+2. Install packages:
+
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+3. Set up environment vars (e.g., API base URL) if needed:
+
+   ```env
+   NEXT_PUBLIC_API_URL=http://127.0.0.1:8000/api
+   ```
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+---
+
+## Usage
+
+* Visit the Next.js app at `http://localhost:3000`.
+* Use the Laravel API via `http://127.0.0.1:8000/api/...` for data fetching.
+* Experiment with CRUD operations, authentication flows, and UI components.
+
+---
+
+## Project Structure
+
+```
+root/
+├── backend/     # Laravel application
+├── frontend/    # Next.js application
+└── README.md
+```
+
+---
+
+## Credits & References
+
+* **AngelJay Academy** — YouTube tutorials inspired this project
+* Laravel & Next.js official documentation
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-"# laravel-nextjs-exercise" 
+This project is for learning purposes. Please adjust or apply an appropriate license if you intend to extend or publish it.
+
+---
+
+### How to Proceed
+
+* Update directories based on your actual project layout if needed.
+* Add any custom steps—like seeding sample data, testing commands, or building for production.
+* Let me know if you'd like help writing usage examples, API documentation, or explaining integration details.
+
+[1]: https://github.com/jayimillena/laravel-nextjs-exercise.git "GitHub - jayimillena/laravel-nextjs-exercise: This repository is designed for learning NextJS on its fundamentals, this is indented to be public for future references in academe. All credits belongs to the online tutor channel on YouTube \"AngelJay Academy\" for teaching me this course."
