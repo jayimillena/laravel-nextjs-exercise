@@ -1,11 +1,11 @@
 ````markdown
- Laravel + Next.js Exercise
+Laravel + Next.js Exercise
 
 A learning project for combining **Laravel (backend API)** with **Next.js (frontend)**, based on tutorials from **AngelJay Academy** on YouTube.
 
 ---
 
- Table of Contents
+Table of Contents
 
 - [Project Overview](project-overview)  
 - [Prerequisites](prerequisites)  
@@ -19,7 +19,7 @@ A learning project for combining **Laravel (backend API)** with **Next.js (front
 
 ---
 
- Project Overview
+Project Overview
 
 This repository contains two distinct parts:
 
@@ -30,7 +30,7 @@ It’s a practical exercise following AngelJay Academy’s tutorials.
 
 ---
 
- Prerequisites
+Prerequisites
 
 Ensure your system has the following installed:
 
@@ -40,9 +40,9 @@ Ensure your system has the following installed:
 
 ---
 
- Installation
+Installation
 
- Backend (Laravel)
+Backend (Laravel)
 
 1. **Clone the repository:**
    ```bash
@@ -85,7 +85,7 @@ Ensure your system has the following installed:
 
 ---
 
- Frontend (Next.js)
+Frontend (Next.js)
 
 1. **Navigate to the frontend directory:**
 
@@ -97,7 +97,7 @@ Ensure your system has the following installed:
 
    ```bash
    npm install
-    or
+   or
    yarn
    ```
 
@@ -111,13 +111,13 @@ Ensure your system has the following installed:
 
    ```bash
    npm run dev
-    or
+   or
    yarn dev
    ```
 
 ---
 
- Usage
+Usage
 
 * Visit the Next.js app at:
   `http://localhost:3000`
@@ -129,18 +129,18 @@ Ensure your system has the following installed:
 
 ---
 
- Project Structure
+Project Structure
 
 ```
 root/
-├── backend/      Laravel application
-├── frontend/     Next.js application
+├── backend/     Laravel application
+├── frontend/    Next.js application
 └── README.md
 ```
 
 ---
 
- Credits & References
+Credits & References
 
 * **AngelJay Academy** — YouTube tutorials inspired this project
 * [Laravel Documentation](https://laravel.com/docs)
@@ -148,7 +148,7 @@ root/
 
 ---
 
- License
+License
 
 This project is for learning purposes.
 Please adjust or apply an appropriate license if you intend to extend or publish it.
